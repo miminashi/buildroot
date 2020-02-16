@@ -3,9 +3,9 @@
 
 [[legal-info]]
 
-== Legal notice and licensing
+== 法的通知とライセンス
 
-=== Complying with open source licenses
+=== オープンソースライセンスの遵守
 
 All of the end products of Buildroot (toolchain, root filesystem, kernel,
 bootloaders) contain open source software, released under various licenses.
@@ -83,7 +83,7 @@ the _NO WARRANTY_ clauses (clauses 11 and 12) in the +COPYING+ file at the
 root of the Buildroot distribution.
 
 [[legal-info-buildroot]]
-=== Complying with the Buildroot license
+=== Buildrootライセンスの遵守
 
 Buildroot itself is an open source software, released under the
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.html[GNU General

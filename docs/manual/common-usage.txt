@@ -1,13 +1,13 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-== General Buildroot usage
+== 一般的なBuildrootの使い方
 
 include::make-tips.txt[]
 
 include::rebuilding-packages.txt[]
 
-=== Offline builds
+=== オフラインビルド
 
 If you intend to do an offline build and just want to download
 all sources that you previously selected in the configurator
@@ -20,7 +20,7 @@ all sources that you previously selected in the configurator
 You can now disconnect or copy the content of your +dl+
 directory to the build-host.
 
-=== Building out-of-tree
+=== ツリー外をビルドする
 
 As default, everything built by Buildroot is stored in the directory
 +output+ in the Buildroot tree.
@@ -62,7 +62,7 @@ and +-C <...>+, simply run (in the output directory):
 
 [[env-vars]]
 
-=== Environment variables
+=== 環境変数
 
 Buildroot also honors some environment variables, when they are passed
 to +make+ or set in the environment:
@@ -119,7 +119,7 @@ or +g+++ for building helper-binaries on your host, then do
  $ make HOSTCXX=g++-4.3-HEAD HOSTCC=gcc-4.3-HEAD
 --------------------
 
-=== Dealing efficiently with filesystem images
+=== ファイルシステムイメージを効率的に扱う
 
 Filesystem images can get pretty big, depending on the filesystem you choose,
 the number of packages, whether you provisioned free space... Yet, some
@@ -157,7 +157,7 @@ your filesystem, those parts may not be all-zeroes when read back). You
 should only use sparse files when handling files on the build machine, not
 when transferring them to an actual device that will be used on the target.
 
-=== Graphing the dependencies between packages
+=== パッケージ間の依存関係をグラフ化する
 
 [[graph-depends]]
 
@@ -234,7 +234,7 @@ The +graph-depends+ behaviour can be controlled by setting options in the
 BR2_GRAPH_DEPS_OPTS='-d 3 --no-transitive --colors=red,green,blue' make graph-depends
 --------------------------------
 
-=== Graphing the build duration
+=== ビルド待ち時間をグラフ化する
 
 [[graph-duration]]
 
@@ -281,7 +281,7 @@ BR2_GRAPH_OUT=png make graph-build
 ----------------
 
 [[graph-size]]
-=== Graphing the filesystem size contribution of packages
+=== パッケージのファイルシステムサイズへの寄与をグラフ化する
 
 When your target system grows, it is sometimes useful to understand
 how much each Buildroot package is contributing to the overall root
@@ -348,7 +348,7 @@ utils/size-stats-compare -h
 ----------------
 
 [[top-level-parallel-build]]
-=== Top-level parallel build
+=== トップレベル並列ビルド
 
 .Note
 This section deals with a very experimental feature, which is known to

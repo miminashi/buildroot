@@ -2,7 +2,7 @@
 // vim: set syntax=asciidoc:
 
 [[full-rebuild]]
-=== Understanding when a full rebuild is necessary
+=== フルリビルドがいつ必要になるのかについて理解する
 
 Buildroot does not attempt to detect what parts of the system should
 be rebuilt when the system configuration is changed through +make

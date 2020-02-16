@@ -1,7 +1,7 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-== Configuration of other components
+== 他のコンポーネントの設定
 
 Before attempting to modify any of the components below, make sure you
 have already configured Buildroot itself, and have enabled the

@@ -2,7 +2,7 @@
 // vim: set syntax=asciidoc:
 
 [[customize-store-buildroot-config]]
-=== Storing the Buildroot configuration
+=== Buildroot設定の保存
 
 The Buildroot configuration can be stored using the command
  +make savedefconfig+.

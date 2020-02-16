@@ -2,7 +2,7 @@
 // vim: set syntax=asciidoc:
 
 [[customize-users]]
-=== Adding custom user accounts
+=== カスタムユーザアカウントを追加する
 
 Sometimes it is needed to add specific users in the target system.
 To cover this requirement, Buildroot provides support for so-called

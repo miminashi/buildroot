@@ -1,9 +1,9 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-== Beyond Buildroot
+== Buildrootを超えて
 
-=== Boot the generated images
+=== 生成されたイメージの起動
 
 ==== NFS boot
 

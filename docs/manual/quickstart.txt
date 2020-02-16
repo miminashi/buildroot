@@ -1,7 +1,7 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-== Buildroot quick start
+== Buildrootクイックスタート
 
 *Important*: you can and should *build everything as a normal user*. There
 is no need to be root to configure and use Buildroot. By running all

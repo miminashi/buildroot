@@ -2,7 +2,7 @@
 // vim: set syntax=asciidoc:
 
 [[customize]]
-== Project-specific customization
+== プロジェクトごとのカスタマイズ
 
 Typical actions you may need to perform for a given project are:
 

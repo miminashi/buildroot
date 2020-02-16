@@ -2,7 +2,7 @@
 // vim: set syntax=asciidoc:
 
 [[rootfs-custom]]
-=== Customizing the generated target filesystem
+=== 生成されたターゲットファイルシステムをカスタマイズする
 
 Besides changing the configuration through +make *config+,
 there are a few other ways to customize the resulting target filesystem.

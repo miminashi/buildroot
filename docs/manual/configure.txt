@@ -2,7 +2,7 @@
 // vim: set syntax=asciidoc:
 
 [[configure]]
-== Buildroot configuration
+== Buildrootの設定
 
 All the configuration options in +make *config+ have a help text
 providing details about the option.
@@ -24,7 +24,7 @@ sufficiently self-explanatory, a number of topics require additional
 explanation that cannot easily be covered in the help text and are
 therefore covered in the following sections.
 
-=== Cross-compilation toolchain
+=== クロスコンパイルツールチェーン
 
 A compilation toolchain is the set of tools that allows you to compile
 code for your system. It consists of a compiler (in our case, +gcc+),
@@ -285,7 +285,7 @@ set the environment variable +BR2_DEBUG_WRAPPER+ to either one of:
 
 * +2+: trace one argument per line
 
-=== /dev management
+=== /dev の管理
 
 On a Linux system, the +/dev+ directory contains special files, called
 _device files_, that allow userspace applications to access the
@@ -377,7 +377,7 @@ good solution.
 Note that if +systemd+ is chosen as init system, /dev management will
 be performed by the +udev+ program provided by +systemd+.
 
-=== init system
+=== initシステム
 
 The _init_ program is the first userspace program started by the
 kernel (it carries the PID number 1), and is responsible for starting

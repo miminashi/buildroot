@@ -1,7 +1,7 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-=== Customization _after_ the images have been created
+=== イメージが生成された _後に_ カスタマイズを行う
 
 While post-build scripts (xref:rootfs-custom[]) are run _before_
 building the filesystem image, kernel and bootloader, *post-image

@@ -2,7 +2,7 @@
 // vim: set syntax=asciidoc:
 
 [[customize-patches]]
-=== Adding project-specific patches
+=== プロジェクトごとのパッチを追加する
 
 It is sometimes useful to apply 'extra' patches to packages - on top of
 those provided in Buildroot. This might be used to support custom

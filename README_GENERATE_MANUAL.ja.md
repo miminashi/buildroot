@@ -2,5 +2,5 @@
 
 ```sh
 docker build -t buildroot .
-docker run buildroot make manual-html
+docker run -v "$(pwd)/docs:/workdir/docs:ro" -v "$(pwd)/output:/workdir/output" buildroot make manual-html
 ```

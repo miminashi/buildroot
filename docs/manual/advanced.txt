@@ -1,7 +1,7 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-=== Advanced usage
+=== 高度な使い方
 
 include::using-buildroot-toolchain.txt[]
 

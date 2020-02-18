@@ -2,7 +2,7 @@
 // vim: set syntax=asciidoc:
 
 [[community-resources]]
-== Community resources
+== コミュニティリソース
 
 Like any open source project, Buildroot has different ways to share
 information in its community and outside.

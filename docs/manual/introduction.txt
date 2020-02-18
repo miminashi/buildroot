@@ -1,26 +1,38 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-== About Buildroot
+== Buildrootについて
 
+////
 Buildroot is a tool that simplifies and automates the process of
 building a complete Linux system for an embedded system, using
 cross-compilation.
+////
+Buildrootは、クロスコンパイルを使用して、組み込みシステム用の完全なLinuxシステムを構築するプロセスを簡素化および自動化するツールです。
 
+////
 In order to achieve this, Buildroot is able to generate a
 cross-compilation toolchain, a root filesystem, a Linux kernel image
 and a bootloader for your target. Buildroot can be used for any
 combination of these options, independently (you can for example use
 an existing cross-compilation toolchain, and build only your root
 filesystem with Buildroot).
+////
+これを実現するために、Buildrootはクロスコンパイルツールチェーン、ルートファイルシステム、Linuxカーネルイメージ、およびターゲット用のブートローダーを生成できます。Buildrootは、これらのオプションを任意に組み合わせて個別に使用できます（たとえば、既存のクロスコンパイルツールチェーンを使用し、Buildrootでルートファイルシステムのみをビルドできます）。
 
+////
 Buildroot is useful mainly for people working with embedded systems.
 Embedded systems often use processors that are not the regular x86
 processors everyone is used to having in his PC. They can be PowerPC
 processors, MIPS processors, ARM processors, etc.
+////
+Buildrootは、主に組み込みシステムで作業する人々に役立ちます。 組み込みシステムは、多くの場合、誰もが自分のPCで使用している通常のx86プロセッサーではないプロセッサーを使用します。 PowerPCプロセッサ、MIPSプロセッサ、ARMプロセッサなどです。
 
+////
 Buildroot supports numerous processors and their variants; it also
 comes with default configurations for several boards available
 off-the-shelf. Besides this, a number of third-party projects are based on,
 or develop their BSP footnote:[BSP: Board Support Package] or
 SDK footnote:[SDK: Software Development Kit] on top of Buildroot.
+////
+Buildrootは、多数のプロセッサとその派生をサポートしています。また、市販のいくつかのボードのデフォルト構成も付属しています。これに加えて、多くのサードパーティプロジェクトは、Buildrootに基づいているか、 BSP footnote:[BSP: Board Support Package] または SDK footnote:[SDK: Software Development Kit] をBuildroot上に構築しています。

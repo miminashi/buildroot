@@ -1,72 +1,114 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-== Buildroot quick start
+== Buildrootクイックスタート
 
+////
 *Important*: you can and should *build everything as a normal user*. There
 is no need to be root to configure and use Buildroot. By running all
 commands as a regular user, you protect your system against packages
 behaving badly during compilation and installation.
+////
 
+*重要*: ビルドは一般ユーザで行うことができ、また、*一般ユーザでビルドをすべて行うべきです* 。Buildrootの設定や利用をするのにrootになる必要はありません。すべてのコマンドを一般ユーザとして実行することで、コンパイルやインストールの最中に、怪しい挙動をするパッケージからシステムを保護することができます。
+
+////
 The first step when using Buildroot is to create a configuration.
 Buildroot has a nice configuration tool similar to the one you can
 find in the http://www.kernel.org/[Linux kernel] or in
 http://www.busybox.net/[BusyBox].
+////
 
+Buildrootを使用する際の最初のステップは構成を作成することです。Buildrootには、http://www.kernel.org/[Linuxカーネル]やhttp://www.busybox.net/[BusyBox]にあるものと似た優れた構成ツールがあります。
+
+////
 From the buildroot directory, run
+////
+buildrootディレクトリから、
 
 --------------------
  $ make menuconfig
 --------------------
 
+////
 for the original curses-based configurator, or
+////
+を実行するとcursedベースの構成ツールが、
 
 --------------------
  $ make nconfig
 --------------------
 
+////
 for the new curses-based configurator, or
+////
+を実行すると新しいcursesベースの構成ツールが、
 
 --------------------
  $ make xconfig
 --------------------
 
+////
 for the Qt-based configurator, or
+////
+を実行するとQtベースの構成ツールが、
 
 --------------------
  $ make gconfig
 --------------------
 
+////
 for the GTK-based configurator.
+////
+を実行するとGTKベースの構成ツールが、それぞれ起動します。
 
+////
 All of these "make" commands will need to build a configuration
 utility (including the interface), so you may need to install
 "development" packages for relevant libraries used by the
 configuration utilities. Refer to xref:requirement[] for more details,
 specifically the xref:requirement-optional[optional requirements]
 to get the dependencies of your favorite interface.
+////
+これらのすべての "make"コマンドは設定ユーティリティ（インタフェースを含む）をビルドする必要があるので、設定ユーティリティが使用する関連ライブラリ用の "開発"パッケージをインストールする必要があるかもしれません。詳細については xref:requirement[] を、具体的には選択したインターフェースの依存関係を取得するための xref:requirement-optional[オプション要件] を参照してください。
 
+////
 For each menu entry in the configuration tool, you can find associated
 help that describes the purpose of the entry. Refer to xref:configure[]
 for details on some specific configuration aspects.
+////
+構成ツールの各メニュー項目には、その項目の目的を説明している関連ヘルプがあります。特定の設定に関する詳細は xref:configure[] を参照してください。
 
+////
 Once everything is configured, the configuration tool generates a
 +.config+ file that contains the entire configuration. This file will be
 read by the top-level Makefile.
+////
+すべての設定が完了すると、設定ツールは設定全体を含む +.config+ ファイルを生成します。このファイルはトップレベルのMakefileによって読み込まれます。
 
+////
 To start the build process, simply run:
+////
+ビルドプロセスを開始するには、ただ次のコマンドを実行するだけです:
 
 --------------------
  $ make
 --------------------
 
+////
 By default, Buildroot does not support top-level parallel build, so
 running +make -jN+ is not necessary. There is however experimental
 support for top-level parallel build, see
 xref:top-level-parallel-build[].
+////
+デフォルトでは、Buildrootはトップレベル並列ビルドをサポートしていません。そのため、 +make -jN+ をつけて実行する必要はありません。しかしながら、試験的なトップレベル並列ビルドのサポートがあります。xref:top-level-parallel-build[] をご覧ください。
 
+////
 The `make` command will generally perform the following steps:
+////
+`make` コマンドは通常以下のステップを実行します:
 
+////
 * download source files (as required);
 * configure, build and install the cross-compilation toolchain, or
   simply import an external toolchain;
@@ -74,18 +116,34 @@ The `make` command will generally perform the following steps:
 * build a kernel image, if selected;
 * build a bootloader image, if selected;
 * create a root filesystem in selected formats.
+////
+* ソースファイルのダウンロード（要求に応じて）
+* クロスコンパイルツールチェーンの設定、ビルド、インストール、或いはシンプルに外部ツールチェーンの導入
+* 選択されたターゲットパッケージの設定、ビルド、インストール
+* もし選択されていれば、カーネルイメージのビルド
+* もし選択されていれば、ブートローダイメージのビルド
+* 選択されたフォーマットでrootファイルシステムの作成
 
+////
 Buildroot output is stored in a single directory, +output/+.
 This directory contains several subdirectories:
+////
+Buildrootの出力は単一のディレクトリ +output/+ に格納されています。このディレクトリにはいくつかのサブディレクトリがあります:
 
+////
 * +images/+ where all the images (kernel image, bootloader and root
   filesystem images) are stored. These are the files you need to put
   on your target system.
+////
+* +images/+ は全てのイメージ（カーネルイメージ、ブートローダ、ルートファイルシステムのイメージ）が格納されている場所です。これらは、ターゲットシステムに配置する必要があるファイルです
 
+////
 * +build/+ where all the components are built (this includes tools
   needed by Buildroot on the host and packages compiled for the
   target). This directory contains one subdirectory for each of these
   components.
+////
+* +build/+ は全てのコンポーネントがビルドされる場所です（これはホスト上のBuildrootが必要とするツールとターゲット用にコンパイルされたパッケージを含みます）。このディレクトリには、これらのコンポーネントごとに1つのサブディレクトリがあります
 
 * +host/+ contains both the tools built for the host, and the sysroot
   of the target toolchain. The former is an installation of tools
@@ -103,6 +161,7 @@ This directory contains several subdirectories:
 * +staging/+ is a symlink to the target toolchain sysroot inside
   +host/+, which exists for backwards compatibility.
 
+////
 * +target/+ which contains 'almost' the complete root filesystem for
   the target: everything needed is present except the device files in
   +/dev/+ (Buildroot can't create them because Buildroot doesn't run
@@ -116,10 +175,18 @@ This directory contains several subdirectories:
   libraries needed to run the selected target applications: the
   development files (headers, etc.) are not present, the binaries are
   stripped.
+////
+* +target/+ はターゲットの 'ほぼ' 完全なルートファイルシステムを含みます: +/dev/+ のデバイスファイルを除いて必要なものはすべて存在します（Buildrootはroot権限で実行されず、またroot権限で実行したくはないのでBuildrootはそれらを作成できません）。また、適切な権限がありません（例えば、busyboxバイナリのsetuid）。したがって、このディレクトリは *ターゲットでは使用しないでください* 。代わりに、+images/+ ディレクトリに構築されているイメージの1つを使うべきです。NFS経由で起動するためにルートファイルシステムの抽出イメージが必要な場合は、 +images/+ で生成されたtarballイメージをルートファイルシステムとして展開します。 +target/+ は +staging/+ と比較して、選択されたターゲットアプリケーションを実行するのに必要なファイルとライブラリのみを含みます。つまり、開発ファイル（ヘッダなど）は存在せず、バイナリはstrip済(stripped)です。
 
+////
 These commands, +make menuconfig|nconfig|gconfig|xconfig+ and +make+, are the
 basic ones that allow to easily and quickly generate images fitting
 your needs, with all the features and applications you enabled.
+////
++make menuconfig|nconfig|gconfig|xconfig+ および +make+ は、すべての機能とアプリケーションを有効にして、ニーズに合ったイメージを簡単かつ迅速に生成するための基本的なコマンドです。
 
+////
 More details about the "make" command usage are given in
 xref:make-tips[].
+////
+より詳細な"make"コマンドの使い方は、 xref:make-tips[] に載っています。

@@ -1,7 +1,7 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-=== Quick guide to storing your project-specific customizations
+=== プロジェクトごとのカスタマイズを保存するためのクイックガイド
 
 Earlier in this chapter, the different methods for making
 project-specific customizations have been described. This section will

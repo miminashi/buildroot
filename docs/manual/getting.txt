@@ -2,7 +2,7 @@
 // vim: set syntax=asciidoc:
 
 [[getting-buildroot]]
-== Getting Buildroot
+== Buildrootの取得
 
 Buildroot releases are made every 3 months, in February, May, August and
 November. Release numbers are in the format YYYY.MM, so for example

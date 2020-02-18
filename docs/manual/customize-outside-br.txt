@@ -2,7 +2,7 @@
 // vim: set syntax=asciidoc:
 
 [[outside-br-custom]]
-=== Keeping customizations outside of Buildroot
+=== Buildrootの外にカスタマイズを保持する
 
 As already briefly mentioned in xref:customize-dir-structure[], you can
 place project-specific customizations in two locations:

@@ -2,7 +2,7 @@
 // vim: set syntax=asciidoc:
 
 [[customize-packages]]
-=== Adding project-specific packages
+=== プロジェクトごとのパッケージを追加する
 
 In general, any new package should be added directly in the +package+
 directory and submitted to the Buildroot upstream project. How to add

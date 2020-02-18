@@ -2,7 +2,7 @@
 // vim: set syntax=asciidoc:
 
 [[requirement]]
-== System requirements
+== システム要件
 
 Buildroot is designed to run on Linux systems.
 
@@ -14,7 +14,7 @@ between distributions).
 
 [[requirement-mandatory]]
 
-=== Mandatory packages
+=== 必須パッケージ
 
 * Build tools:
 
@@ -42,7 +42,7 @@ between distributions).
 
 [[requirement-optional]]
 
-=== Optional packages
+=== オプショナルパッケージ
 
 * Recommended dependencies:
 +

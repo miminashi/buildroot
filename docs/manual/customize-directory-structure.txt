@@ -2,7 +2,7 @@
 // vim: set syntax=asciidoc:
 
 [[customize-dir-structure]]
-=== Recommended directory structure
+=== 推奨されるディレクトリ構造
 
 When customizing Buildroot for your project, you will be creating one or
 more project-specific files that need to be stored somewhere. While most
